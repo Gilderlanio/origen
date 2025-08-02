@@ -1,0 +1,105 @@
+
+{% extends "new_base.html" %}
+
+{% block content %}
+
+<background id="fundo" rel="stylesheet" type="img" src="{{ url_for('static', filename='vetores/fundo.svg') }}"></background>
+
+<style>
+  body {
+    background-color:rgb(145, 156, 156);
+  }
+    .back {
+     background-color: rgb(207, 224, 217); 
+     background-image: url("{{ url_for('static', filename='imagens/fundo4.png') }}");
+     filter: contrast(100%);
+     background-size: cover;
+     overflow: hidden; 
+     width:100%;
+     background-repeat: no-repeat;
+    /* */
+ 
+  /*  
+    position: unset; z-index: -10; overflow: hidden;
+    background-color:#09091a;
+    width: 100%;
+    background-image: url("{{ url_for('static', filename='images/fundo2.png') }}");
+    background-repeat: no-repeat;
+  */
+   
+}
+.back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 17, 17, 0.2); /* opacidade */
+  z-index: -1;
+}
+
+</style>
+<main style="margin: 0; padding: 0;">
+<div class="back" style="padding-left: 0">
+<img class="logo fadeLeft" src="{{ url_for('static', filename='imagens/logo2.png') }}" alt="Orí-Gen">
+ 
+<h3 style="color: white;" class="fadeLeft2">Sobre a Orí-Gen</h3>
+<div class="about-ori">
+<div class="container">
+<section class="card-grid">
+<div style="display:flexbox;">
+      <div class="card  tilt_efect fadeUp0" style=" margin-bottom: 10px; animation-delay: 0.4s;" data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt-scale="0.95">
+        <div style="margin-bottom: 5px;">
+          <img style="display:inline !important; width:22px; margin: 0; margin-bottom: -5px;" src="{{ url_for('static', filename='vetores/dna-2-svgrepo-com.svg') }}" alt="icone de dna" class="svg-icon">
+          <h4 style="display:inline !important; margin-top: -4px;">A Genômica e Diversidade Afrodescendente</h4>
+        </div>
+        <p>A genômica, ramo da biologia que estuda o conjunto completo dos genes de um organismo, tem revolucionado a medicina nas últimas décadas, abrindo portas para diagnósticos mais precisos, terapias personalizadas e avanços significativos na prevenção de doenças.</p>
+             
+      </div>
+    <div style="align-content: flex; display: flex; gap: 10px;"> <!-- flex-wrap: wrap; -->
+      <div class="card fadeBottom tilt_efect" style=" width: 60%; animation-delay: 0.5s;" data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt-scale="0.95">
+        <div style="margin-bottom: 5px;">
+          <span style="display:inline !important;" class="icon"><i class="bi bi-globe-europe-africa-fill"></i>
+          <h4 style="display:inline !important;">Diversidade Genética Africana</h4>
+        </div>
+        <p>Pessoas de origem africana possuem uma das maiores diversidades genéticas do planeta, resultado de milhões de anos de evolução no continente africano. Essa diversidade pode influenciar a forma como doenças se manifestam, bem como a resposta a medicamentos.</p>
+                
+      </div>
+      <div class="card  tilt_efect fadeBottom" style=" width: 40%; animation-delay: 0.6s;" data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt-scale="0.95">
+        <div style="margin-bottom: 5px;">
+          <img style="display:inline !important; width: 26px; margin: 0; margin-bottom: -5px;" src="{{ url_for('static', filename='vetores/health-care-love-svgrepo-com.svg') }}" alt="icone de dna" class="svg-icon">
+          <h4 style="display:inline !important;">Desafios na Saúde</h4>
+        </div>
+        <p>No contexto da saúde, essa desigualdade se traduz em desafios concretos. Afrodescendentes frequentemente enfrentam maior incidência de certas doenças, como hipertensão e diabetes, e ao mesmo tempo, menor acesso a diagnósticos precoces e tratamentos eficazes.</p>
+                
+      </div>
+    </div>
+</div>
+
+    <div style="display:inline-block; margin-right: 0;">
+      <div class="card  tilt_efect fadeUp0"  style=" width: 60%; animation-delay: 0.7s; " data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt-scale="0.95" transform-style: preserve-3d>
+        <div style="margin-bottom: 5px;">
+          <img style="display:inline !important; width: 26px; margin: 0; margin-bottom: -5px;" src="{{ url_for('static', filename='vetores/balance-1-svgrepo-com.svg') }}" alt="icone de dna" class="svg-icon">
+          <h4 style="display:inline !important;" class="tilt_efect">Ações Éticas e Inclusivas</h4 transform: translateZ(20px)>
+        </div>
+        <p class="tilt_efect">Ampliar a participação de afrodescendentes em pesquisas genéticas não é apenas uma questão científica, mas também ética e social. Iniciativas de genômica inclusiva são essenciais para reduzir desigualdades históricas na saúde e construir uma medicina mais equitativa.</p transform: translateZ(20px)>
+                
+      </div>
+      <div class="card  tilt_efect fadeLeft0" style=" width: 60%; animation-delay: 0.8s; height: 56.2%;  margin-top: 10px;" data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt-scale="0.95">
+        <div style="margin-bottom: 5px;"> 
+          <img style="display:inline !important; width: 26px; margin: 0; margin-bottom: -5px;" src="{{ url_for('static', filename='vetores/puzzle-piece-01-svgrepo-com.svg') }}" alt="icone de dna" class="svg-icon">
+          <h4 style="display:inline !important;">Integração da Genômica</h4>
+        </div>
+        <p>Integrar a genômica à promoção da saúde da população afrodescendente é uma oportunidade única de avançar na justiça social, garantindo que o futuro da medicina seja realmente para todos.</p>
+                
+      </div>
+    </div>
+    </section>
+</div>
+</div>
+
+</div>
+</main>
+{% endblock %}
+
